@@ -1,23 +1,43 @@
 # Rails Factory
 
-Railsのprojectを簡単に作成する。
+Rails の project を簡単に作成する。
 
 ## 必要なもの
-- Ruby (latest version): Railsでサポートしているversion
-    - rbenv (latest version)
-    - ruby build (latest version)
+
+- Ruby (latest version): Rails でサポートしている version
+  - rbenv (latest version)
+  - ruby build (latest version)
 - Bundler (latest version)
 
-## 作り方
-1. Gemfileで使いたいRailsのversionを記載する
-    - 5.2.3の場合: `gem "rails", "5.2.3"`
-        - rbenvで5.2.3がサポートしているRubyに切り替える
-1. bundle install
-    - Globalを汚染しない様にGemを `/vendor/bundle` 直下にインストールする様に設定。
-1. `bundle exec rails --version` でRailsのインストールを確認。
-1. `bundle exec rails new [projectName] -d mysql -T -B` でproject作成
-    - 作りたいprojectによってoptionは変更。
-1. 他のところへ持っていって開発開始👍
+## 使い方
+
+1. `Gemfile` で使いたい Rails の version を記載する
+   - 6.0.3.2 の場合: `gem "rails", "6.0.3.2"`
+1. rbenv で 6.0.3.2 がサポートしている Ruby に切り替える
+   - 2.7.1
+1. `vender` ディレクトリがある場合は削除する
+   - `$ rm -rf vernder`
+1. ↑ で指定した Rails をインストールする
+   - `$ bundle install`
+1. Rails のインストールを確認
+   - `$ bundle exec rails -v`
+1. project 作成
+   - `$ bundle exec rails new project/[projectName] -d mysql -T -B`
+   1. 作りたい project によって option は変更
+      - `$ bundle exec rails -h` で詳細確認可能
+      - 以下、主要な option
+        - `-d` : データベース
+          - mysql/postgresql/sqlite3
+        - `-T` : テストは導入しない
+          - 作るプロジェクトで選択可能とする
+        - `-B` : `bundle install` を行わない
+          - 作るプロジェクトで必要な Gem を選択可能とする
+1. 他のところへ持っていって開発開始 👍
+
+## ライセンス
+
+[MIT ライセンス](LICENSE)
 
 ## 参考
+
 - どこかの記事を参考にしたけど思い出せない…
