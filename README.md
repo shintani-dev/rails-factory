@@ -22,7 +22,7 @@ Rails の project を簡単に作成する。
 1. Rails のインストールを確認
    - `$ bundle exec rails -v`
 1. project 作成
-   - `$ bundle exec rails new project/[projectName] -d mysql -T -B`
+   - `$ bundle exec rails new projects/[projectName] --api -d mysql -T -B`
    1. 作りたい project によって option は変更
       - `$ bundle exec rails -h` で詳細確認可能
       - 以下、主要な option
