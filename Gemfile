@@ -1,2 +1,2 @@
 source "http://rubygems.org"
-gem "rails", "6.0.3.2"
+gem "rails", "7.0.2.3"
